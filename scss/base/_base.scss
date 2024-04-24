@@ -1,0 +1,188 @@
+body{
+    font-family:  'Poppins';
+   // font-size: 14px;
+    color: black;
+    letter-spacing: 0.4px;
+    background: $background-colour;
+}
+header{
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-shadow: 0 0 5px white;
+}
+.slick-dots li button:before{
+    font-size: 5rem;
+    content:".";
+}
+.btn{
+   // height: 56px;
+    
+   background:$button-bg-colour;
+   color: $button-text-colour;
+   padding-left: 20px;
+   padding-right: 20px;
+   text-align: center;
+   max-width: 200px;
+   cursor: pointer;
+}
+.full-filter{
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+}
+.reveal-hidden{
+    display: flex;
+    pointer-events: all;
+}
+.full-filter .image-container{
+
+}
+.email-slides .slick-prev{
+    left:unset;
+    top :unset;
+    right: 50%;
+    bottom: 75px;
+}
+.email-slides .slick-prev::before{
+    font-family: 'icomoon';
+    color: black;
+    content: '\e91c';
+
+}
+.email-slides .slick-next{
+    right: 50%;
+    top:100px;
+}
+.email-slides .slick-next::before{
+    font-family: 'icomoon';
+    color: black;
+    content: '\e91a';
+
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+.sliders-panel{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $panel-colour;
+    padding: 10px;
+}
+.sliders{
+    //width: 400px;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.email-container{
+    position: relative;
+    left: 0;
+   // top: 50%;
+    width: 300px;
+    margin-right: 50px;
+}
+.email-slider{
+   // width: 300px;
+}
+
+
+.email{
+   // width: 300px;
+    background: $email-bg-colour;
+    color: $email-text-colour;
+    padding-left: 20px;
+}
+.central{
+    //background-color: blue;
+   // border: black outset 4px;
+   // padding: 5px;
+}
+.slick-active.central .email{
+    background: $email-bg-colour-target;
+    color: $email-text-colour-target;
+}
+.email span{
+    pointer-events: none;
+}
+.empty{
+   // height: 25.6px;
+   visibility: hidden;
+   pointer-events: none;
+}
+.main-panel{
+  //  display: flex;
+  //  flex-direction: column;
+
+}
+.pictures-container{
+    position: relative;
+    right: 0;
+    width: 300px;
+    height: 150px;
+    border: 2px solid black;
+}
+ .image-container{
+    width: 200px;
+    height: 300px;
+    margin: auto;
+}
+.user-image img{
+    height: 100%;
+    width: 100%;
+}
+.picture-slides .slick-prev::before{
+    font-family: 'icomoon';
+    color: black;
+    content: '\e91e';
+
+}
+.picture-slides .slick-next::before{
+    font-family: 'icomoon';
+    color: black;
+    content: '\e91d';
+
+}
+.add-btn{
+  //  border-radius: 3px;
+   // height: 56px;
+    font-size: 1.5rem;
+    // background: $button-bg-colour;
+    // color: $button-text-colour;
+    // padding-left: 20px;
+    // padding-right: 20px;
+    // text-align: center;
+    // max-width: 200px;
+    // cursor: pointer;
+    // margin: auto;
+}
+.email-input{
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.main-panel{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $panel-colour;
+    padding: 10px;
+}
+.submit{
+    font-size: 2rem;
+    border-radius: 3px;
+
+}
