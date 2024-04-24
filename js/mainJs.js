@@ -176,7 +176,7 @@ submitButton.addEventListener('click',()=>{
     
     if(!validateEmail()){
         console.log("The email was invalid");
-        showDialog("The email was invalid")
+        showDialog("The email was invalid");
         
     }
     else{
