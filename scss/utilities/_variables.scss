@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?xyvfzo');
+    src:  url('../fonts/icomoon.eot?xyvfzo#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?xyvfzo') format('truetype'),
+      url('../fonts/icomoon.woff?xyvfzo') format('woff'),
+      url('../fonts/icomoon.svg?xyvfzo#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  //Colours
+  $background-colour:linear-gradient(to right, white,black 40%);
+  $dialog-bg-colour:radial-gradient(grey,black);
+  $dialog-text-colour: white;
+  $dialog-header-colour: white;
+  $panel-colour:radial-gradient(grey,black);//grey;
+  $button-bg-colour:radial-gradient(grey,black);
+  $button-text-colour:white;
+  $button-bg-colour-h:radial-gradient(black,grey);
+  $button-text-colour-h:white;
+  $arrow-button-colour:black;
+  $image-bg-colour: linear-gradient(to right, grey,black);
+  $email-bg-colour:radial-gradient(white,black);
+  $email-text-colour:black;
+  $email-bg-colour-target:radial-gradient(grey,black);;
+  $email-text-colour-target:white;
