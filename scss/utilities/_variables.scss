@@ -12,10 +12,16 @@
   }
   //Colours
   $background-colour:linear-gradient(to right, white,black 40%);
+  $dialog-bg-colour:radial-gradient(grey,black);
+  $dialog-text-colour: white;
+  $dialog-header-colour: white;
   $panel-colour:radial-gradient(grey,black);//grey;
   $button-bg-colour:radial-gradient(grey,black);
   $button-text-colour:white;
+  $button-bg-colour-h:radial-gradient(black,grey);
+  $button-text-colour-h:white;
   $arrow-button-colour:black;
+  $image-bg-colour: linear-gradient(to right, grey,black);
   $email-bg-colour:radial-gradient(white,black);
   $email-text-colour:black;
   $email-bg-colour-target:radial-gradient(grey,black);;

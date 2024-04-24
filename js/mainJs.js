@@ -83,9 +83,15 @@ function reassignCentralEmail(){
          for(let i =0; i<selectedEmails.length;i++){
             selectedEmails[i].classList.remove("central");
          }
+         let addButtonLoc = document.querySelector(".add-btn");
          if(!selectedEmail.children[0].classList.contains("empty")){
 
          selectedEmail.classList.add("central");
+         
+         addButtonLoc.classList.add("make-visible");
+        }
+        else{
+            addButtonLoc.classList.remove("make-visible");
         }
 }
 function changeToSlide(slideName){
@@ -103,6 +109,14 @@ function changeToSlideActive(slideName){
             $(".email-slides").slick('slickGoTo',i-1);
         }
     }
+}
+function showDialog(message){
+    let locDialog = document.querySelector(".error-dialog");
+    let locFilter = document.querySelector(".full-filter");
+    let locDialogContent = document.querySelector(".error-dialog p");
+    locDialog.classList.add("reveal-hidden");
+   locFilter.classList.add("reveal-hidden");
+    locDialogContent.innerHTML = message;
 }
 function updateImages(){
     let selectedEmails = document.querySelectorAll(".slick-active .email span");
@@ -144,6 +158,11 @@ let submitButton = document.querySelector(".submit");
 let emailInput = document.querySelector(".email-input");
 let emailValue = $(".email-input").val();
 let image = document.querySelector(".main-panel .image-container img");
+let dialog = document.querySelector(".error-dialog");
+let filter = document.querySelector(".full-filter");
+let pictures = document.querySelector(".picture-slides");
+let popupImage = document.querySelector(".full-filter .image-container img");
+let popupImageContainer = document.querySelector(".full-filter .image-container");
 let seed = Math.floor( Math.random()*1000);
 let newSrc ="https://picsum.photos/seed/"+seed+"/200/300";
     let currentEmail;
@@ -157,6 +176,8 @@ submitButton.addEventListener('click',()=>{
     
     if(!validateEmail()){
         console.log("The email was invalid");
+        showDialog("The email was invalid")
+        
     }
     else{
         currentEmail = document.querySelector(".email-input").value;
@@ -218,18 +239,20 @@ slidesContainer.addEventListener('click',(e) => {
 
 
 //ZOOM FUNCTIONALITY
-let pictures = document.querySelector(".picture-slides");
-let popupImage = document.querySelector(".full-filter .image-container img");
-let filter = document.querySelector(".full-filter");
+
+
 pictures.addEventListener('click',(e)=>{
     if(e.target.parentNode.classList.contains("user-image")){
         popupImage.src = e.target.src;
         filter.classList.add("reveal-hidden");
+        popupImageContainer.classList.add("reveal-hidden");
     }
   
 });
 filter.addEventListener('click',()=>{
     filter.classList.remove("reveal-hidden");
+    popupImageContainer.classList.remove("reveal-hidden");
+    dialog.classList.remove("reveal-hidden");
 });
  //Test
 //  let testButton = document.querySelector(".testbtn");
