@@ -13,6 +13,14 @@ $(".picture-slides").slick({
     //centerMode:true,
   arrows:true,
   //vertical:true
+  responsive:[
+{   
+     breakpoint:500,
+    settings: {
+        slidesToShow: 1
+    }
+}
+  ]
 });
 //Constants
 const isEmail = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
@@ -28,7 +36,17 @@ class emailAccount{
 }
 function validateEmail(){
     let emailValue = document.querySelector(".email-input").value;
-    return isEmail.test(emailValue)
+    emailValue = emailValue.trim();
+    if(emailValue === "")
+    {
+        showDialog("You didn't enter a value in email");
+        return false;
+    }
+    else if(isEmail.test(emailValue)){
+        return true;
+    }
+    showDialog("The email was invalid; emails should have the form of 'something@somethingelse.com'");
+    return false;
         
     
 }
@@ -174,12 +192,8 @@ image.src = newSrc;
 //Listeners
 submitButton.addEventListener('click',()=>{
     
-    if(!validateEmail()){
-        console.log("The email was invalid");
-        showDialog("The email was invalid");
-        
-    }
-    else{
+
+    if(validateEmail()){
         currentEmail = document.querySelector(".email-input").value;
         currentEmail = currentEmail.toLowerCase();
         currentAccount = imageEmailArray.find((item)=>item.email ===currentEmail);

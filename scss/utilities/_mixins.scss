@@ -1,0 +1,59 @@
+//Media Queries
+@mixin mq($s){
+    @if $s == "xx-small"{
+        @media (max-width:  $brkpoint-xsm-one ){
+            @content;
+        }
+    }
+    @else if $s == "x-small"{
+        @media (min-width: $brkpoint-xsm) and (max-width: $brkpoint-sm-one){
+            @content;
+        }
+    }
+    @else if $s == "x-small-up"{
+        @media (min-width: $brkpoint-xsm){
+            @content;
+        }
+    }
+    @else if $s == "small"{
+        @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md-one){
+            @content;
+        }
+    }
+    @else if $s == "small-up"{
+        @media (min-width: $brkpoint-sm) {
+            @content;
+        }
+    }
+    @else if $s == "small-down"{
+        @media (max-width: $brkpoint-md-one){
+            @content;
+        }
+    }
+    @else if $s == "medium"{
+        @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg-one){
+            @content;
+        }
+    }
+    @else if $s == "medium-up"{
+        @media (min-width: $brkpoint-md){
+            @content;
+        }
+    }
+    @else if $s == "medium-down"{
+        @media (max-width: $brkpoint-lg-one){
+            @content;
+        }
+    }
+
+    @else if $s == "large"{
+        @media (min-width: $brkpoint-lg){
+            @content;
+        }
+    }
+    // @else if $s == "large"{
+    //     @media (min-width: $brkpoint-lg){
+    //         @content;
+    //     }
+    // }
+}

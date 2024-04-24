@@ -45,7 +45,7 @@ header{
     display: none;
     flex-direction: column;
     width: 300px;
-    height: 300px;
+    
     margin: auto;
     align-items: center;
     padding: 20px;
@@ -64,7 +64,22 @@ header{
     pointer-events: all;
 }
 
+.page-content{
+    width:auto;
+    margin:auto;
+    @include mq(small){
+        width: 800px;
+    }
+    @include mq(medium){
+        width: 800px;
+    }
+    @include mq(large){
+        width:1200px;
+    }
+}
+.email-slider{
 
+}
 .email-slides .slick-prev{
     left:unset;
     top :unset;
@@ -102,18 +117,32 @@ header{
 }
 .sliders{
     //width: 400px;
-    height: 200px;
+  //  height: 200px;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    @include mq(medium-up){
+        flex-direction: row;
+    }
 }
 .email-container{
     position: relative;
     left: 0;
    // top: 50%;
-    width: 300px;
+  
     margin-right: 50px;
+    width: 150px;
+    @include mq(small-down){
+        margin-right: 0;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    @include mq(x-small-up){
+        width: 300px;
+            
+    }
 }
 .email-slider{
    // width: 300px;
@@ -139,8 +168,8 @@ header{
     pointer-events: none;
 }
 .empty{
-   // height: 25.6px;
-   visibility: hidden;
+    height: 25.6px;
+ //  visibility: hidden;
    pointer-events: none;
 }
 .main-panel{
@@ -151,10 +180,14 @@ header{
 .pictures-container{
     position: relative;
     right: 0;
-    width: 300px;
+    width: 100px;
     height: 150px;
     border: 2px solid black;
     background: $image-bg-colour;
+    //overflow: hidden;
+    @include mq(x-small-up){
+        width: 300px;
+    }
 }
  .image-container{
     width: 200px;
@@ -182,14 +215,18 @@ header{
    // height: 56px;
     font-size: 1.5rem;
 visibility: hidden;
+margin-top: 20px;
 }
 .make-visible{
     visibility: visible;
 }
+label{
+    margin-top: 20px;
+}
 .email-input{
     margin: auto;
     margin-bottom: 20px;
-    margin-top: 20px;
+   // margin-top: 20px;
 }
 .main-panel{
     margin: 30px;
