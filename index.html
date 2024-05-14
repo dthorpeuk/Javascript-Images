@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>Javascript Images</title>
         <link rel="stylesheet" href="js/slick/slick.css">
         <link rel="stylesheet" href="js/slick/slick-theme.css">
@@ -11,11 +12,15 @@
 <div class="full-filter">
 
     <div class="image-container">
-        <img src="" alt>
+        <img src="#" alt>
     </div>
     <div class="error-dialog">
-        <h4>Error</h4>
+       
+        <span><span>Error</span>  <span class=" close">×</span></span>
+        <div class="block">
         <p></p>
+        <span class = "btn">OK</span>
+    </div>
     </div>
 </div>
 <header>
@@ -24,74 +29,78 @@
 </header>
      <!-- <div class="container"> -->
         <div class="page-content">
-        <div class="sliders-panel">
-        <div class="sliders">
-            <div class="email-container">
-            <div class="email-slider">
-                <div class="email-slides">
-                    <div>
-                        <div class="email empty">
-                            <span></span>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="email empty">
-                            <span></span>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="email empty">
-                            <span></span>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="email empty">
-                            <span></span>
-                        </div>
-                    </div>
-                    <!-- <div>
-                        <div class="email">
-                          <span>Email@Email.com</span>
-                        </div>
-                     </div>
-                      <div>
-                         <div class="email">
-                            <span>Dan@Email.com</span>
-                            </div>
-                       </div>
-                       <div>
-                        <div class="email">
-                            <span>message@Email.com</span>
-                           </div>
-                      </div>
-                      <div>
-                        <div class="email">
-                            <span>remove@Email.com</span>
-                           </div>
-                      </div> -->
-                       
-                </div>
-                </div>
-            </div>
-            <div class="pictures-container">
-                <div class="pictures-slider">
-                    <div class="picture-slides">
-                    
-                </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="add-btn btn">Add to Selected Email</div>
-    </div>
+        
 
             <div class="main-panel">
                 <div class="image-container">
-                    <img src="" alt>
+                    <img src="#" alt>
                 </div>
                 <label for="email-input">Email</label>
                 <input type="text" id="email-input" class="email-input" placeholder="Email">
+                <div class = "main-buttons">
                 <div class="submit btn">Add Image to Email</div>
+                <div class="refresh btn">Get Another <br> Image<div class = "icon-refresh"></div></div>
+            </div>
+        </div>
+        <div class="sliders-panel" id = "sliders-panel">
+            <div class="sliders">
+                <div class="email-container">
+                <div class="email-slider">
+                    <div class="email-slides">
+                        <div>
+                            <div class="email empty">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="email empty">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="email empty">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="email empty">
+                                <span></span>
+                            </div>
+                        </div>
+                        <!-- <div>
+                            <div class="email">
+                              <span>Email@Email.com</span>
+                            </div>
+                         </div>
+                          <div>
+                             <div class="email">
+                                <span>Dan@Email.com</span>
+                                </div>
+                           </div>
+                           <div>
+                            <div class="email">
+                                <span>message@Email.com</span>
+                               </div>
+                          </div>
+                          <div>
+                            <div class="email">
+                                <span>remove@Email.com</span>
+                               </div>
+                          </div> -->
+                           
+                    </div>
+                    </div>
+                </div>
+                <div class="pictures-container">
+                    <div class="pictures-slider">
+                        <div class="picture-slides">
+                        
+                    </div>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="add-btn btn">Add to Selected Email</div>
         </div>
     </div>
     <!-- </div> -->

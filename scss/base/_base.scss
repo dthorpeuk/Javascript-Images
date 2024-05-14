@@ -52,15 +52,51 @@ header{
     background: $dialog-bg-colour;
     color: $dialog-text-colour;
 }
+.block{
+    display: block;
+    flex-direction: column;
+}
+.block .btn{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    display: block;
+
+}
+.close{
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    filter: alpha(opacity = 20);
+}
+.close:hover{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .5;
+    filter: alpha(opacity = 50);
+}
 .full-filter .image-container{
     display: none;
 }
-.full-filter .reveal-hidden{
+.full-filter.reveal-hidden{
     display: flex;
     pointer-events: all;
 }
-.reveal-hidden{
+.image-container.reveal-hidden{
     display: flex;
+    pointer-events: all;
+}
+.reveal-hidden.error-dialog{
+    display: block;
     pointer-events: all;
 }
 
@@ -109,11 +145,14 @@ header{
 }
 .sliders-panel{
     margin: 30px;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     background: $panel-colour;
     padding: 10px;
+}
+.sliders-panel-visible{
+    display: flex;
 }
 .sliders{
     //width: 400px;
@@ -227,6 +266,7 @@ label{
     margin: auto;
     font-size: 1rem;
     margin-bottom: 20px;
+    font-family: 'Poppins';
    // margin-top: 20px;
 }
 .main-panel{
@@ -237,8 +277,23 @@ label{
     background: $panel-colour;
     padding: 10px;
 }
+.main-buttons{
+    display: flex;
+}
 .submit{
     font-size: 2rem;
   
 
+}
+.refresh{
+    padding-bottom: 10px;
+}
+.icon-refresh{
+    font-family: 'icomoon' !important;
+   // content: '\ea90';
+}
+.icon-refresh::before{
+    font-family: 'icomoon' !important;
+    font-size: 50px;
+    content: "\ea2e";
 }
